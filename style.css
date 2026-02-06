@@ -132,3 +132,6 @@ html {
 .nav-links a:hover {
   color: #ffffff;
 }
+section {
+  scroll-margin-top: 90px;
+}
