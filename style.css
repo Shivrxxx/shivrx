@@ -78,38 +78,57 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== GLOBAL RESET (important) ===== */
+body {
+  margin: 0;
+}
 
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: #000;
   border-bottom: 1px solid #111;
   z-index: 1000;
 }
 
+/* perfect center container */
 .nav-container {
   max-width: 1200px;
-  margin: auto;
-  padding: 16px 20px;
+  margin: 0 auto;
+  padding: 18px 20px;
+
   display: flex;
-  justify-content: center;   /* ← CENTER ALIGN */
+  justify-content: center;   /* horizontal center */
+  align-items: center;
 }
 
+/* horizontal menu */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
 }
 
+/* remove purple default link */
 .nav-links a {
   color: #9ca3af;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.25s ease;
 }
 
+/* hover */
 .nav-links a:hover {
   color: #ffffff;
 }
