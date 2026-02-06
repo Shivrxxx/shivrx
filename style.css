@@ -1,10 +1,16 @@
 /* ===== GLOBAL RESET ===== */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #000;
+  color: #e5e7eb;
+  line-height: 1.6;
+  padding-top: 80px; /* prevents content hiding behind fixed navbar */
 }
 
 /* Smooth scroll */
@@ -15,81 +21,9 @@ html {
 /* Prevent section hiding behind fixed navbar */
 section {
   scroll-margin-top: 90px;
-}
-
-/* ===== BLOG GRID ===== */
-.blogs {
-  padding: 60px 20px;
-}
-
-.grid.blogs-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* ===== CARD ===== */
-.card {
-  background: #111;
-  border-radius: 16px;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-}
-
-.card .content {
-  padding: 16px;
-}
-
-/* ===== TEXT ===== */
-.tag {
-  font-size: 12px;
-  color: #888;
-  margin-bottom: 8px;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.desc {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 14px;
-}
-
-.year {
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 12px;
-}
-
-.read {
-  font-size: 13px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.read:hover {
-  text-decoration: underline;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .grid.blogs-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .grid.blogs-3 {
-    grid-template-columns: 1fr;
-  }
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* ===== NAVBAR ===== */
@@ -107,7 +41,6 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 18px 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,8 +50,6 @@ section {
   list-style: none;
   display: flex;
   gap: 32px;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-links a {
@@ -131,4 +62,170 @@ section {
 
 .nav-links a:hover {
   color: #ffffff;
+}
+
+/* ===== GRID SYSTEM ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ===== BLOG GRID ===== */
+.blogs-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .blogs-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .blogs-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== CARD ===== */
+.card {
+  background: linear-gradient(180deg, #0b0b0b 0%, #070707 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  padding: 16px;
+}
+
+.tag {
+  font-size: 12px;
+  color: #00ffa3;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.year {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.read {
+  font-size: 13px;
+  color: #00ffa3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read:hover {
+  text-decoration: underline;
+}
+
+/* ===== STATS GRID ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.stats div {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.stats b {
+  display: block;
+  margin-top: 4px;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+/* ===== VIDEO GRID ===== */
+.videos-2 {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .videos-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-thumb {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-landscape .video-thumb {
+  aspect-ratio: 16 / 9;
+}
+
+.video-portrait .video-thumb {
+  aspect-ratio: 9 / 16;
+}
+
+.duration {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.85);
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  color: #00ffa3;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.video-thumb:hover .play {
+  opacity: 1;
 }
