@@ -135,3 +135,9 @@ html {
 section {
   scroll-margin-top: 90px;
 }
+body {
+  margin: 0;
+}
+section {
+  scroll-margin-top: 90px;
+}
