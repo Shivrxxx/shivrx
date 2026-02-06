@@ -26,7 +26,7 @@ section {
   margin: auto;
 }
 
-/* ===== NAVBAR BASE ===== */
+/* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
   top: 0;
@@ -37,66 +37,65 @@ section {
   z-index: 1000;
 }
 
+/* container */
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
 }
 
-/* Logo */
-.logo {
-  font-weight: 600;
-  color: #fff;
-}
-
-/* Menu */
+/* ===== CENTER MENU PERFECTLY ===== */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 32px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* links */
 .nav-links a {
   color: #9ca3af;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.25s;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.25s ease;
 }
 
 .nav-links a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
-/* ===== HAMBURGER ===== */
+/* ===== HAMBURGER (right side) ===== */
 .hamburger {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: none;
   flex-direction: column;
-  cursor: pointer;
   gap: 5px;
+  cursor: pointer;
 }
 
 .hamburger span {
   width: 24px;
   height: 2px;
   background: #fff;
-  transition: 0.3s;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
-  .hamburger {
-    display: flex;
-  }
-
   .nav-links {
     position: absolute;
     top: 64px;
     left: 0;
+    transform: none;
+
     width: 100%;
     background: #000;
 
@@ -113,6 +112,10 @@ section {
 
   .nav-links.active {
     max-height: 300px;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
 /* ===== GRID SYSTEM ===== */
