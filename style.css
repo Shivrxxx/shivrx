@@ -1,15 +1,34 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent section hiding behind fixed navbar */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* ===== BLOG GRID ===== */
 .blogs {
   padding: 60px 20px;
 }
 
-/* Grid Layout */
 .grid.blogs-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-/* Card */
+/* ===== CARD ===== */
 .card {
   background: #111;
   border-radius: 16px;
@@ -21,12 +40,11 @@
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
-/* Content Padding */
 .card .content {
   padding: 16px;
 }
 
-/* Text Styles */
+/* ===== TEXT ===== */
 .tag {
   font-size: 12px;
   color: #888;
@@ -61,7 +79,7 @@
   text-decoration: underline;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .grid.blogs-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -72,20 +90,6 @@
   .grid.blogs-3 {
     grid-template-columns: 1fr;
   }
-}
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* ===== GLOBAL RESET (important) ===== */
-body {
-  margin: 0;
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
 }
 
 /* ===== NAVBAR ===== */
@@ -99,18 +103,16 @@ html {
   z-index: 1000;
 }
 
-/* perfect center container */
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 18px 20px;
 
   display: flex;
-  justify-content: center;   /* horizontal center */
+  justify-content: center;
   align-items: center;
 }
 
-/* horizontal menu */
 .nav-links {
   list-style: none;
   display: flex;
@@ -119,7 +121,6 @@ html {
   margin: 0;
 }
 
-/* remove purple default link */
 .nav-links a {
   color: #9ca3af;
   text-decoration: none;
@@ -128,16 +129,6 @@ html {
   transition: color 0.25s ease;
 }
 
-/* hover */
 .nav-links a:hover {
   color: #ffffff;
-}
-section {
-  scroll-margin-top: 90px;
-}
-body {
-  margin: 0;
-}
-section {
-  scroll-margin-top: 90px;
 }
