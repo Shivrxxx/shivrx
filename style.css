@@ -286,3 +286,31 @@ section {
 .video-thumb:hover .play {
   opacity: 1;
 }
+/* ===== FIX: BRAND POSTERS RESPONSIVE ===== */
+
+/* Remove fixed box size */
+#brand .card {
+  width: 100%;
+  height: auto;        /* ← important */
+  max-width: 100%;     /* ← remove 350px lock */
+}
+
+/* Make image responsive */
+#brand .card img {
+  width: 100%;
+  height: auto;        /* ← remove 350px lock */
+  object-fit: cover;
+}
+
+/* Mobile: single centered column */
+@media (max-width: 768px) {
+
+  #brand .grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #brand .card {
+    max-width: 360px;   /* clean mobile card size */
+  }
+}
