@@ -277,7 +277,23 @@ section {
   opacity: 0;
   transition: opacity 0.25s ease;
 }
+/* default desktop size */
+.brand-img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
 
+/* ONLY MOBILE */
+@media (max-width:768px){
+
+  /* apply only inside brand or posters section */
+  #brand .brand-img,
+  #posters .brand-img{
+    height:350px;      /* your mobile height */
+  }
+
+}
 .video-thumb:hover .play {
   opacity: 1;
 }
