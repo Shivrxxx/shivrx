@@ -310,15 +310,6 @@ section {
     justify-items: center;
   }
 }
-/* CENTER videos section content */
-#videos .grid {
-  justify-items: center;
-}
-
-/* portrait grid center */
-#videos .portrait-4 {
-  justify-content: center;
-}
 /* Center single card in Digital section */
 #digital .grid {
   display: flex;
@@ -328,29 +319,4 @@ section {
 #digital .card {
   max-width: 380px;
   width: 100%;
-}
-@media (max-width: 768px) {
-
-  /* center ALL section content */
-  section {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  /* videos stacked center */
-  .videos-2 {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  /* portrait videos grid center */
-  .portrait-4 {
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-  }
-
-  /* digital card full center */
-  #digital .card {
-    max-width: 340px;
-  }
 }
