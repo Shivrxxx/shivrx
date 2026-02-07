@@ -283,17 +283,21 @@ section {
   object-fit:cover;
 }
 
-/* ONLY MOBILE */
-@media (max-width:768px){
+/* ===== MOBILE IMAGE SIZE (ONLY Posters & Brand) ===== */
+@media (max-width: 768px) {
 
-  #brand .brand-img,
-  #posters .brand-img{
-    width:100%;
-    max-width:400px;   /* your 400px */
-    height:350px;      /* your 350px */
-    margin:auto;       /* center image */
-    display:block;
+  /* Target only poster + brand images */
+  #posters img,
+  #brand img {
+    width: 100%;       /* responsive base */
+    max-width: 400px;  /* your exact width limit */
+    height: 350px;     /* fix height you want */
+    object-fit: cover; /* crop to fit */
+    display: block;
+    margin: 0 auto;    /* center the image */
   }
+
+}
 
 }
 }
