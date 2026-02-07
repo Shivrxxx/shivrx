@@ -310,3 +310,12 @@ section {
     justify-items: center;
   }
 }
+/* CENTER videos section content */
+#videos .grid {
+  justify-items: center;
+}
+
+/* portrait grid center */
+#videos .portrait-4 {
+  justify-content: center;
+}
