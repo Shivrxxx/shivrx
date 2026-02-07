@@ -381,3 +381,42 @@ section {
     width: 220px;             /* nicer mobile size */
   }
 }
+/* ===== MOBILE VIDEOS FINAL ===== */
+@media (max-width: 768px){
+
+  /* stack landscape + portraits */
+  #videos .videos-2{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* landscape full width */
+  #videos .video-landscape{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #videos .video-landscape .video-thumb{
+    aspect-ratio: 16/9;
+  }
+
+  /* portraits → SINGLE COLUMN */
+  #videos .portrait-4{
+    display: flex !important;
+    flex-direction: column;   /* ⭐ key line */
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+  }
+
+  /* portrait size */
+  #videos .video-portrait{
+    width: 220px;
+  }
+
+  #videos .video-portrait .video-thumb{
+    aspect-ratio: 9/16;
+  }
+}
