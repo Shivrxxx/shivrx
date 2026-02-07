@@ -286,31 +286,27 @@ section {
 .video-thumb:hover .play {
   opacity: 1;
 }
-/* ===== FIX: BRAND POSTERS RESPONSIVE ===== */
+/* ===== BRAND IMAGE EXACT SIZE CONTROL ===== */
 
-/* Remove fixed box size */
-#brand .card {
-  width: 100%;
-  height: auto;        /* ← important */
-  max-width: 100%;     /* ← remove 350px lock */
-}
-
-/* Make image responsive */
-#brand .card img {
-  width: 100%;
-  height: auto;        /* ← remove 350px lock */
+/* Desktop size */
+#brand .brand-img{
+  width: 300px;
+  height: 350px;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Mobile: single centered column */
-@media (max-width: 768px) {
+/* Tablet + Mobile */
+@media (max-width: 768px){
 
-  #brand .grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
+  #brand .brand-img{
+    width: 350px;
+    height: 350px;
   }
 
-  #brand .card {
-    max-width: 360px;   /* clean mobile card size */
+  /* keep card centered */
+  #brand .grid{
+    justify-items: center;
   }
 }
