@@ -88,9 +88,10 @@ section {
 @media (max-width:768px){
 
   .nav-container{
-    justify-content:flex-start; /* prevent center shift */
+    justify-content:space-between;
   }
 
+  /* HIDE menu COMPLETELY */
   .nav-links{
     position:absolute;
     top:64px;
@@ -103,21 +104,17 @@ section {
     gap:18px;
     padding:20px 0;
 
-    max-height:0;
-    overflow:hidden;
-    transition:max-height .3s ease;
+    display:none;              /* ⭐ REAL FIX */
   }
 
+  /* SHOW only when hamburger clicked */
   .nav-links.active{
-    max-height:300px;
+    display:flex;
   }
 
   .hamburger{
     display:flex;
   }
-}
-section{
-  scroll-margin-top:100px; /* matches navbar height */
 }
 /* ===== GRID SYSTEM ===== */
 .grid {
