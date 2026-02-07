@@ -290,7 +290,7 @@ section {
   /* apply only inside brand or posters section */
   #brand .brand-img,
   #posters .brand-img{
-    height:350px;      /* your mobile height */
+    height:400px;      /* your mobile height */
   }
 
 }
