@@ -276,8 +276,7 @@ section {
   color: #00ffa3;
   opacity: 0;
   transition: opacity 0.25s ease;
-}
-/* default desktop size */
+}/* default desktop */
 .brand-img{
   width:100%;
   height:300px;
@@ -287,12 +286,16 @@ section {
 /* ONLY MOBILE */
 @media (max-width:768px){
 
-  /* apply only inside brand or posters section */
   #brand .brand-img,
   #posters .brand-img{
-    height:400px;      /* your mobile height */
+    width:100%;
+    max-width:400px;   /* your 400px */
+    height:350px;      /* your 350px */
+    margin:auto;       /* center image */
+    display:block;
   }
 
+}
 }
 .video-thumb:hover .play {
   opacity: 1;
