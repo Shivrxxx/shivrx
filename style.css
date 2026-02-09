@@ -424,21 +424,17 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  align-items: stretch;
+
+  /* KEY FIX */
+  grid-auto-rows: 1fr;
 }
 
-/* Card */
 #digital .card {
-  background: #0b0b0b;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(0,255,170,0.15);
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-/* Image */
 #digital .card img {
   width: 100%;
   height: 220px;
@@ -446,12 +442,10 @@ section {
   display: block;
 }
 
-/* Content */
 #digital .content {
   padding: 18px;
-  flex: 1; /* makes all cards same height */
+  flex: 1;
 }
-
 /* Title */
 #digital .title {
   font-size: 18px;
