@@ -546,3 +546,22 @@ section {
     grid-template-columns: 1fr;
   }
 }
+.play-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 28px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.play-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.1);
+}
