@@ -469,3 +469,80 @@ section {
     grid-template-columns: 1fr;
   }
 }
+/* Main layout */
+.videos-layout {
+  display: grid;
+  gap: 20px;
+}
+
+/* Landscape video */
+.video-landscape {
+  width: 100%;
+}
+
+.video-landscape .video-thumb {
+  aspect-ratio: 16 / 9;
+}
+
+/* Portrait row */
+.portrait-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Portrait cards */
+.video-portrait .video-thumb {
+  aspect-ratio: 9 / 16;
+}
+
+/* Thumbnail base */
+.video-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #000;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover zoom */
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Play icon */
+.play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Duration badge */
+.duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .portrait-row {
+    grid-template-columns: 1fr;
+  }
+}
